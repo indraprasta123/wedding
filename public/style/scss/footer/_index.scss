@@ -1,0 +1,174 @@
+.footer {
+    background: #2d2a2a;
+    color: white;
+    &__content {
+        display: flex;
+        justify-content: space-around;
+        padding: 50px 20px 0px 20px;
+    }
+    &__logo {
+        &__img {
+            width: 100px;
+        }
+    }
+    &__shorcut , &__portfolio {
+        svg {
+            display: none;
+        }
+        &__title {
+            margin: 0;
+        }
+        &__list {
+            list-style: none;
+            line-height: 30px;
+            padding: 0;
+        }
+        &__link {
+            color: white;
+            text-decoration: none;
+        }
+    }
+    &__sosmed {
+        &__title {
+            margin: 0;
+        }
+        &__txt {
+            color: white;
+        }
+        &__list {
+            margin-top: 20px;
+            line-height: 20px;
+        }
+        &__url {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: black;
+            i {
+                font-size: 20px;
+                width: 35px;
+                border-radius: 50%;
+                height: 35px;
+                background: white;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            .fa-google:hover {
+                background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                -webkit-text-fill-color: transparent;
+            }
+            .fa-facebook-f:hover {
+                background: #3c5a99;
+                color: white;
+            }
+            .fa-instagram:hover {
+                background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+                    color: white;
+            }
+            .fa-youtube:hover {
+                background: #dc2743;
+                color: white;
+            }
+
+        }
+    }
+    &__copy-right {
+        position: relative;
+        border-top: 2px solid #494a4b59;
+        box-shadow: 2px 2px 2px 2px #000000d9;
+        padding: 10px;
+        margin-top: 30px;
+        &__url-wa {
+            position: fixed;
+            right: 25px;
+            bottom: 20px;
+        }
+    }
+}
+
+@media only screen and (max-width: 767.98px) {
+    .footer {
+        &__logo {
+            display: none;
+        }
+        &__content {
+            flex-direction: column;
+            justify-content: unset;
+            gap: 40px;
+        }
+        &__shorcut , &__portfolio {
+            &__accordion {
+                display: flex;
+                justify-content: space-between;
+            }
+            &__list {
+                display: none;
+            }
+            .open .footer__shorcut__list {
+                display: block;
+                margin: 0;
+                padding-top: 10px;
+            }
+            .open .footer__portfolio__list {
+                display: block;
+                margin: 0;
+                padding-top: 10px;
+            }
+            &__item {
+                min-height: 0;
+            }
+
+            svg {
+                display: block;
+            }
+        }
+        .open
+        .dropdown {
+            transform: rotate(-180deg);
+            transition: 0.25s ease-in-out;
+        }
+        &__sosmed {
+            &__list {
+                line-height: 25px;
+            }
+            &__url {
+                i {
+                    font-size: 18px;
+                    width: 33px;
+                    height: 33px;
+                }
+            }
+        }
+        &__copy-right {
+            text-align: center;
+            .wa-img {
+                width: 50px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 576.86px) {
+    .footer {
+        &__sosmed {
+            &__url {
+                i {
+                    font-size: 15px;
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+        &__copy-right {
+            text-align: center;
+            .wa-img {
+                width: 45px;
+            }
+        }
+    }
+}

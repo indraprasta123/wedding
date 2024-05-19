@@ -1,0 +1,190 @@
+.p-home {
+    padding-top: 140px;
+    padding-right: 60px;
+    padding-left: 60px;
+    background-color: #f1f5f7;
+    &__banner {
+        position: relative;
+        display: flex;
+        &__title {
+            color: #000000e3;
+            font-size: 120px;
+            font-family: serif;
+            font-weight: 400;
+            opacity: 0;
+            transform: translateY(16px);
+            transition: all 1s ease;
+            transition-delay: 0s;
+            margin-bottom: 0;
+            .p-home--animation & {
+                opacity: 1;
+                transform: none;
+                transition-delay: 0.75s;
+            }
+        }
+        &__desc {
+            position: absolute;
+            bottom: 170px;
+            left: 0px;
+            color: black;
+            margin: 0;
+            padding: 16px 0;
+            opacity: 0;
+            transform: translateY(16px);
+            transition: all 1s ease;
+            transition-delay: 0s;
+            margin-bottom: 0;
+            .p-home--animation & {
+                opacity: 1;
+                transform: none;
+                transition-delay: 1s;
+            }
+        }
+        &__txt {
+            font-size: 15px;
+            font-weight: 400;
+            color: grey;
+        }
+        &__wrap {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            z-index: 1;
+            align-items: center;
+        }
+        &__content {
+            display: flex;
+            width: 100%;
+            gap: 100px;
+            justify-content: space-between;
+        }
+        &__image {
+            position: relative;
+            width: 400px;
+            opacity: 0;
+            transition: all 1s ease;
+            transition-delay: 0s;
+            margin-bottom: 90px;
+            .p-home--animation & {
+                opacity: 1;
+                transform: none;
+                transition-delay: 0.5s;
+            }
+        }
+        img {
+            width: 100%;
+            border-radius: 30%;
+            position: relative;
+        }
+    }
+}
+
+@media only screen and (max-width: 1074px) {
+    .p-home {
+        &__banner {
+            &__title {
+                font-size: 100px;
+            }
+            &__image {
+                width: 350px;
+            }
+            &__desc {
+                bottom: 160px;
+                left: 0;
+            }
+            &__txt {
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 991.98px) {
+    .p-home {
+        &__banner {
+            &__title {
+                font-size: 85px;
+            }
+            &__image {
+                width: 300px;
+            }
+            &__txt {
+                font-size: 11px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767.98px) {
+    .p-home {
+        padding-left: 20px;
+        padding-right: 20px;
+        &__banner {
+            margin-bottom: 0;
+            &__wrap {
+                flex-direction: column;
+                gap: 30px;
+            }
+            &__content {
+                width: unset;
+                flex-direction: column;
+                gap: 20px;
+            }
+            &__title {
+                text-align: center;
+                font-size: 85px;
+                margin: 0;
+            }
+            &__image {
+                margin: 0;
+                width: 330px;
+            }
+            &__desc {
+                position: unset;
+            }
+            &__txt {
+                font-size: 12px;
+                margin-bottom: 70px;
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 575.86px) {
+    .p-home {
+        &__banner {
+            &__title {
+                font-size: 60px;
+                margin: 0;
+            }
+            &__image {
+                margin: 0;
+                width: 250px;
+            }
+            &__txt {
+                font-size: 10px;
+                margin-bottom: 50px;
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 320.98px) {
+    .p-home {
+        padding-left: 10px;
+        padding-right: 10px;
+        &__banner {
+            &__title {
+                font-size: 50px;
+            }
+            &__image {
+                width: 200px;
+            }
+            &__txt {
+                font-size: 9px;
+            }
+        }
+    }
+}
